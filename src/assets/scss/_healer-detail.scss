@@ -1,0 +1,48 @@
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+.modal-body {
+    position: relative;
+    padding: 5px;
+}
+.close {
+    position: absolute;
+    right: -30px;
+    top: -15px;
+    z-index: 999;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #fff;
+    opacity: 1;
+}
+
+.designation {
+    color: #56d300;
+    @include rem(font-size, 12px);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.healer {
+    p {
+        @include rem(margin-bottom, 18px);
+        line-height: 1.8;
+    }
+
+    .product-content {
+        h1 {
+            @include respond-to(767px, max) {
+              @include rem(margin-top, 20px);  
+            }
+        }
+    }
+}
+
+.healer-video {
+     @include rem(margin-top, 40px);
+     p {
+        @include rem(margin-bottom, 18px);
+        line-height: 1.8;
+     }
+}

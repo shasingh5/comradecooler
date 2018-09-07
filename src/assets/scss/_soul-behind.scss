@@ -1,0 +1,60 @@
+.soul-behind-wrapper {
+	@include rem(margin-bottom, 50px);
+}
+
+.soul-behind {	
+	img {
+		display: inline-block;
+		width: 146px;
+		height: 146px;
+		border-radius: 50%;
+	}
+
+	h4 {
+		@include rem(font-size, 11px);
+		font-weight: 800;
+		color: $black;
+		@include rem(margin-top, 15px);
+	}
+	h3 {
+		@include rem(font-size, 13px);
+		font-weight: 500;
+		color: $grey;
+		line-height: 1.5;
+	}
+	h2 {
+		@include rem(font-size, 37px);
+		font-weight: 300;
+		color: $grey;
+		@include rem(margin-top, 8px);
+		@include rem(margin-bottom, 10px);
+	}
+
+	p {
+		@include rem(font-size, 11px);
+		line-height: 1.8;
+		color: $grey;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&.soul-second, &.soul-third {		
+		@include respond-to($media-sm) {
+			@include rem(margin-top, 167px);
+		}
+		@include respond-to($media-sm, max) {
+			@include rem(margin-top, 25px);
+		}
+	}
+	&.soul-second {			
+		@include respond-to($media-sm) {
+			border-right: 1px solid #ccc;
+			@include rem(padding-right, 20px);
+		}
+	}
+	&.soul-third {	
+		@include respond-to($media-sm) {
+			border-left: 1px solid #ccc;
+			@include rem(padding-left, 20px);
+		}
+	}
+}

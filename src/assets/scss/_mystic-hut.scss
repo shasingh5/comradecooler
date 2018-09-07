@@ -1,0 +1,51 @@
+.mystic-hut-wrapper {
+	background-color: #fbfbfb;
+	color: $grey;
+	@include rem(padding, 60px 0);
+	h1 {
+		@include rem(font-size, 50px);
+		font-weight: 300;
+		@include respond-to($media-sm) {
+			@include rem(margin, 195px 0 15px);
+		}	
+		@include respond-to($media-sm, 1024px) {
+			@include rem(margin, 100px 0 15px);
+		}	
+	}
+	p {
+		@include rem(font-size, 10px);
+		line-height: 2;
+	}
+
+	img {
+		@include respond-to($media-sm, max) {
+			@include rem(margin-top, 25px);
+		}
+	}
+}
+
+.mh-inner {
+	max-width: 350px;
+	margin: 0 auto;
+	.hut-first {
+		@include rem(margin, 60px 0 34px);
+	}
+}
+
+.hut-card {
+	h3 {
+		@include rem(font-size, 17px);
+		font-weight: 500;
+		@include rem(margin-bottom, 5px);
+	}
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $darkpink;
+		@include rem(font-size, 10px);
+		font-weight: 800;
+
+	}
+}
