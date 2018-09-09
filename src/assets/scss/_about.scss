@@ -2,9 +2,11 @@
     background-color: #0e1843;
     border-bottom: 3px solid darken(#0e1843, 10);
     color: #fff;
-    overflow-x: auto;
+    
     width: 100%;
-
+	@include respond-to(767px, max) {
+        overflow-x: auto;
+    }
     ul {
         width: 920px;
         font-size: 0;
@@ -62,7 +64,7 @@
         border-bottom: 1px solid #cccccc;
 
         li {
-            width: 10.93%;
+            width: 11.11111111111111%;
             text-transform: uppercase;
 
             padding: 0;
