@@ -50,12 +50,15 @@
 
 .mega-dropdown {
   position: static !important;
+  float: none;
+  display: inline-block;
 }
 .mega-dropdown-menu {
     padding: 0;
     width: 100%;
     box-shadow: none;
     -webkit-box-shadow: none;
+    text-align: center;
 }
 .mega-dropdown-menu > li > ul {
   padding: 0;
@@ -107,6 +110,16 @@
   border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
+  text-align: center;
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
 }
 
 .nav .dropdown-3.open >a, .nav .dropdown-3.open>a:focus, .nav .dropdown-3.open>a:hover {
@@ -116,4 +129,37 @@
 
 .dropdown-menu>li>a {
   padding: 20px;
+}
+
+.c-icon, .heater, .mixer {
+  background: url('../img/air-cooler-icons.png') 0 0 no-repeat;
+  width: 80px;
+  height: 75px;
+  overflow: hidden;
+  text-indent: -9999px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.heater {
+  background: url('../img/water-heater-icons.png') 0 0 no-repeat;
+}
+
+.mixer {
+  background: url('../img/kitchen-appliances-icons.png') 0 0 no-repeat;
+}
+
+.product-card {
+  &:hover {
+    .icon-img .c-icon {
+      background-position: 0 -70px;
+    }
+
+    .icon-img .heater {
+      background-position: 0 -70px;
+    }
+    .icon-img .mixer {
+      background-position: 0 -70px;
+    }
+  }  
 }
