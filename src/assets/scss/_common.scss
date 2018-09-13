@@ -6,6 +6,9 @@ html {
         @include rem-baseline(75%);
     }
 }
+html, body {
+    height: 100%;
+}
 body, html, h1, h2, h3, h4, h5, h6 {
     font-family: $openSans;
 }
@@ -117,4 +120,18 @@ img {
     @include respond-to(400px,  767px) {
         width: 33.33333333333333%;
     }
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("../img/fixed-bg.jpg");
+
+    /* Set a specific height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

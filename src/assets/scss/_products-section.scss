@@ -35,7 +35,7 @@
 
     &.features {
         @include rem(margin-bottom, 30px);
-
+        background: #fff;
         .photo {
             @include rem(padding, 50px);
 
@@ -52,6 +52,7 @@
 
         p {
             line-height: 1.5;
+            padding: 0 15px 20px;
         }
 
         &:hover {
@@ -157,8 +158,17 @@
     @include rem(margin-bottom, 30px);
 }
 
+.parallax {
+    .nav-tabs {
+        margin-top: 40px;
+    }
+}
+
 .tab-wrapper {
     @include rem(padding, 20px 0);
+    .table-responsive {        
+        background: #fff;
+    }
 }
 
 .nav-tabs {
