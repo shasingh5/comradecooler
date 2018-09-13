@@ -46,6 +46,7 @@
 
 .dropdown-menu > li > a {
     @include rem(font-size, 10px);
+    font-weight: 400;
 }
 
 .mega-dropdown {
@@ -107,28 +108,35 @@
 .sn-photo {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border: 0 !important;
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
 }
 
-.icon-img {
+.product-card .icon-img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
+  border: 0 !important;
 }
+
 
 .nav .dropdown-3.open >a, .nav .dropdown-3.open>a:focus, .nav .dropdown-3.open>a:hover {
     background-color: transparent;
     border-color: #337ab7;
 }
 
+.dropdown-menu {
+  border-bottom: 1px solid #353f63;
+}
+
 .dropdown-menu>li>a {
   padding: 20px;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .c-icon, .heater, .mixer {
@@ -162,4 +170,34 @@
       background-position: 0 -70px;
     }
   }  
+}
+
+.navbar-nav .dropdown-menu > li > a {
+    &:before {
+      height: 2px;
+    background: #353f63;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    z-index: 100;
+    }
+    h4 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.navbar-nav .dropdown-menu > li:hover > a {
+
+  &:before {
+    width: 100%;
+    left: 0;
+  }
+  
+  h4 {
+    color: #353f63;
+  }
 }
